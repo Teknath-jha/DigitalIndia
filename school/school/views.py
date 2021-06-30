@@ -15,6 +15,9 @@ def aboutDevelopers(request):
 def contactUs(request):
     return render(request,'contactUs.html')
 
+def login(request):
+    return render(request,'login.html')
+
 def events(request):
     return HttpResponse(" we are at events  ")
 
