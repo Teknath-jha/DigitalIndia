@@ -18,8 +18,7 @@ def feeDetails(request):
 def result(request):
     return HttpResponse("we are at result")
 
-def login(request):
-    return HttpResponse("we are at login")
+
 
 
 
