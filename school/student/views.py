@@ -7,7 +7,10 @@ def index(request):
     return render(request,'index.html')
 
 def assignments(request):
-    return HttpResponse("we are at assignments")
+    return render(request,'assignments.html')
+
+def maths(request):
+    return render(request,'maths.html')
 
 def feeDetails(request):
     return HttpResponse("we are at fee details")

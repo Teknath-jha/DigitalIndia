@@ -6,6 +6,7 @@ urlpatterns = [
     path("",views.index,name='studentHome'),
     path("login/",views.login,name='login'),
     path("assignments/",views.assignments,name='assignments'),
+    path("maths/",views.maths,name='maths'),
     path("feeDetails/",views.feeDetails ,name='feeDetails'),
     path("results/",views.result ,name='result'),
 ]

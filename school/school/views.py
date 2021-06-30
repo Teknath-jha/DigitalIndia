@@ -12,8 +12,8 @@ def about(request):
 def aboutDevelopers(request):
     return render(request,'aboutDevelopers.html')
 
-def contact(request):
-    return HttpResponse(" we are at contact us ")
+def contactUs(request):
+    return render(request,'contactUs.html')
 
 def events(request):
     return HttpResponse(" we are at events  ")

@@ -23,7 +23,7 @@ urlpatterns = [
     path('about/',views.about , name='about'),
     path('aboutDevelopers/',views.aboutDevelopers , name='aboutDevelopers'),
     path('events/',views.events, name='events'),
-    path('contact/',views.contact , name='contact'),
+    path('contactUs/',views.contactUs , name='contactUs'),
     path('facilities/',views.facilities, name='facilities'),
     path('feeStructure/',views.feeStructure, name='feeStructure'),
     path("student/",include('student.urls')),                         #includeing entire app os student

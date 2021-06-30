@@ -42,7 +42,8 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="#" class="logo me-auto l-1"><img src="{%static 'img/school-logo.png'%}" alt="school-logo" class="img-fluid"></a>
+      <a href="#" class="logo me-auto l-1"><img src="{%static 'img/school-logo.png'%}" alt="school-logo"
+          class="img-fluid"></a>
       <h1 class="logo me-auto"><a href="{%url 'index'%}">School</a></h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -77,12 +78,21 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <!-- <li><a href="{%url 'contact'%}">Contact</a></li> -->
+          <li><a href="{%url 'contactUs'%}">Contact Us</a></li>
         </ul>
+
+
+
+        <li class="dropdown get-started-btn"><a href="#"><span>Login</span> <i class="bi bi-chevron-down "></i></a>
+          <ul>
+            <li><a href="#">Principal</a></li>
+            <li><a href="#">Teacher</a></li>
+            <li><a href="{%url 'assignments'%}">Student</a></li>
+          </ul>
+        </li>
+        <!-- <a href="#" class="get-started-btn">Login</a> -->
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
-      <a href="#" class="get-started-btn">Login</a>
 
 
     </div>
@@ -102,12 +112,14 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Mentor</h3>
+            <h3>School</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
+              Phoolpada road <br>
+              Virar(E) , palghar 401 304 <br>
+              Maharashtra <br>
+              India
+              <br><br>
+              <strong>Phone:</strong> +91 1234567890<br>
               <strong>Email:</strong> info@example.com<br>
             </p>
           </div>
@@ -125,7 +137,7 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <p>Any site where school maintains their updates</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
@@ -136,10 +148,11 @@
     </div>
 
     <div class="container d-md-flex py-4">
+      
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>School</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
 
