@@ -307,14 +307,16 @@
 
         <!-- Icon -->
         <div class="fadeIn first">
-            <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+            <!-- <img src="{%static 'img/school-logo.png'%}" id="icon" alt="User Icon" /> -->
+            <a href="#" class="logo me-auto l-1"><img src="{%static 'img/school-logo.png'%}" alt="school-logo"
+                    class="img-fluid"></a>
         </div>
 
         <!-- Login Form -->
         <form>
             <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
             <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-            <input type="submit" class="fadeIn fourth" value="Log In">
+            <input type="submit" class="fadeIn fourth bold" value="Log In">
         </form>
 
         <!-- Remind Passowrd -->
