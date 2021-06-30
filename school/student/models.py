@@ -16,4 +16,5 @@ class Student(models.Model):
     s_address = models.CharField(max_length=500)
     s_gender  = models.CharField( max_length=20)
     s_email   = models.EmailField(max_length=254,default="")
+    s_password  = models.CharField( default="admin" , max_length=50)
  
