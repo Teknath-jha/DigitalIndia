@@ -7,7 +7,10 @@ def index(request):
     return render(request,'index.html')
 
 def about(request):
-    return HttpResponse(" we are at about  ")
+    return render(request,'about.html')
+
+def aboutDevelopers(request):
+    return render(request,'aboutDevelopers.html')
 
 def contact(request):
     return HttpResponse(" we are at contact us ")

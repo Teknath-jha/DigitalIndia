@@ -7,15 +7,15 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>{% block title %}
-            
+
     {% endblock %}</title>
 
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{%static 'img/favicon.png' %}" rel="icon">
-  <link href="{%static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{%static 'img/school-logo.png' %}" rel="icon">
+  <link href="{%static 'img/school-logo.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
@@ -37,23 +37,28 @@
 </head>
 
 <body>
-  
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto"><a href="{%url 'index'%}">School</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="/img/logo.png" alt="" class="img-fluid"></a>-->
-
+      <a href="#" class="logo me-auto l-1"><img src="{%static 'img/school-logo.png'%}" alt="school-logo" class="img-fluid"></a>
+      <h1 class="logo me-auto"><a href="{%url 'index'%}">School</a></h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="active" href="{%url 'index'%}">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{%url 'about'%}">School</a></li>
+              <li><a href="#">Principal</a></li>
+              <li><a href="#">Teachers</a></li>
+              <li><a href="#">Non-teaching Staff</a></li>
+              <li><a href="{%url 'aboutDevelopers'%}">Developers</a></li>
+            </ul>
+          </li>
           <li><a href="#">Courses</a></li>
-          <li><a href="#">Trainers</a></li>
           <li><a href="#">Events</a></li>
-          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Fees structues</a></li>
 
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -78,18 +83,19 @@
       </nav><!-- .navbar -->
 
       <a href="#" class="get-started-btn">Login</a>
-      <a href="#" class="get-started-btn">Register</a>
+
 
     </div>
   </header><!-- End Header -->
 
   <!-- body -->
-    {% block content %}
-bow boiw 
-    {% endblock %}
+  {% block content %}
+
+
+  {% endblock %}
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer" class="bg-dark">
 
     <div class="footer-top">
       <div class="container">
@@ -136,7 +142,7 @@ bow boiw
           &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          
+
           Designed by <a href="#">students</a>
         </div>
       </div>
