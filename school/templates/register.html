@@ -1,0 +1,72 @@
+{% extends "base.html"%}
+{%load static%}
+{% block title %} Mathematics {% endblock %}
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    
+<form>
+{% csrf_token %}
+    <div class="form-group">
+      <label for="rollNo"  ><b>Roll number </b></label>
+      <input type="text" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="rollName" name="rollNo" placeholder="Roll no.">
+    </div>
+    <div class="form-group">
+      <label for=""><b>student Name</b> </label>
+      <input type="text" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="username" name="username" placeholder="Student Name">
+    </div>
+    <div class="form-group">
+      <label for="fatherName"><b>Father name</b></label>
+      <input type="text" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="fatherName" name="fatherName" placeholder="Father Name">
+    </div>
+    <div class="form-group">
+      <label for="surname"><b>surname</b></label>
+      <input type="text" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="surname" name="surname" placeholder="Surname ">
+    </div>
+    <div class="form-group">
+      <label for="motherName"><b>Mother name</b></label>
+      <input type="text" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="motherName" name="motherName" placeholder="Mother Name">
+    </div>
+    <div class="form-group">
+      <label for="phone"><b>Phone</b></label>
+      <input type="text" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="phone" name="phone" placeholder="Contact Number ">
+    </div>
+    <div class="form-group">
+      <label for="standard"> <b>Standard</b></label>
+      <input type="text" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="standard" name="standard" placeholder="Standard">
+    </div>
+    <div class="form-group">
+      <label for="age"><b>Age</b></label>
+      <input type="text" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="age" name="age" placeholder="Age">
+    </div>
+    <div class="form-group">
+      <label for="dob"> <b>Date of birth</b></label>
+      <input type="text" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="dob" name="dob" placeholder="Date of Birth">
+    </div>
+    <div class="form-group">
+      <label for="gender"><b>Gender</b></label>
+      <input type="text" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="gender" name="gender" placeholder="Gender">
+    </div>
+    <div class="form-group">
+      <label for="address"><b>Address</b></label>
+      <input type="text" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="address" name="address" placeholder="address">
+    </div>
+    <div class="form-group">
+      <label for="email"><b>Email address</b></label>
+      <input type="email" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="email" name="email" placeholder="email">
+    </div>
+    <div class="form-group">
+      <label for="studentPassword"> <b>Password at time of addmission</b></label>
+      <input type="text" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="studentPassword" name="studentPassword" placeholder="Initial password of student provided by school">
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Add to school</button>
+  </form>
+
+</div>
+{% endblock %}
+
