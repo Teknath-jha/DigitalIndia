@@ -9,8 +9,8 @@ def index(request):
 def assignments(request):
     return render(request,'assignments.html')
 
-def maths(request):
-    return render(request,'maths.html')
+def assignmentDetails(request):
+    return render(request,'assignmentDetails.html')
 
 def feeDetails(request):
     return HttpResponse("we are at fee details")

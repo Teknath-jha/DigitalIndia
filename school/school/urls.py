@@ -26,10 +26,13 @@ urlpatterns = [
     path('login',views.handlelogin , name='handlelogin'),
     path('logout/',views.handlelogout , name='handlelogout'),
     path('register',views.register , name='register'),
+    path('registerTeacher',views.registerTeacher , name='registerTeacher'),
     path('events/',views.events, name='events'),
     path('contactUs/',views.contactUs , name='contactUs'),
     path('facilities/',views.facilities, name='facilities'),
     path('feeStructure/',views.feeStructure, name='feeStructure'),
+    path('classes/',views.classes, name='classes'),
+    path('classesDetails/',views.classesDetails, name='classesDetails'),
     path("student/",include('student.urls')),                         #includeing entire app os student
     path("teachingStaff/",include('teachingStaff.urls'))
 ]
