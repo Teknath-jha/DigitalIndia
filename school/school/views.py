@@ -22,6 +22,34 @@ def aboutDevelopers(request):
 def contactUs(request):
     return render(request,'contactUs.html')
 
+def register(request):
+    print("inside register ")
+    if request.method =='GET':
+        return render(request,'register.html')
+    if request.method == 'POST':
+        rollNo = request.POST[ 'rollNo' ]
+        username = request.POST[ 'username' ]
+        fatherName = request.POST[ 'fatherName' ]
+        surname= request.POST[ 'surname' ]
+        motherName = request.POST[ 'motherName' ]
+        phone = request.POST[ 'phone' ]
+        standard = request.POST[ 'standard' ]
+        age = request.POST[ 'age' ]
+        dob = request.POST[ 'dob' ]
+        gender = request.POST[ 'gender' ]
+        address = request.POST[ 'address' ]
+        email = request.POST[ 'email' ]
+        studentPassword = request.POST[ 'studentPassword' ]
+        Student(s_rollNo=rollNo ,  username = username ,s_father=fatherName,s_surname=surname,s_mother=motherName,s_phone=phone,s_standard=standard,s_age=age,
+        s_birth=dob,s_gender=gender,s_address=address,s_email=email,password=studentPassword).save()
+        print("student register hogay bhai ")
+        return HttpResponse("Added ")
+    
+
+
+
+        
+
 
 def handlelogin(request):
     if request.method=='POST':

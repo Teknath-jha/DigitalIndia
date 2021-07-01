@@ -25,6 +25,7 @@ urlpatterns = [
     path('aboutDevelopers/',views.aboutDevelopers , name='aboutDevelopers'),
     path('login',views.handlelogin , name='handlelogin'),
     path('logout/',views.handlelogout , name='handlelogout'),
+    path('register',views.register , name='register'),
     path('events/',views.events, name='events'),
     path('contactUs/',views.contactUs , name='contactUs'),
     path('facilities/',views.facilities, name='facilities'),

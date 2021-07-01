@@ -10,8 +10,9 @@
 <br>
 <div class="container">
     
-<form>
+<form action="/register" method="post" >
 {% csrf_token %}
+<h3>Student Registeration</h3><br> <hr>
     <div class="form-group">
       <label for="rollNo"  ><b>Roll number </b></label>
       <input type="text" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="rollName" name="rollNo" placeholder="Roll no.">
@@ -46,7 +47,7 @@
     </div>
     <div class="form-group">
       <label for="dob"> <b>Date of birth</b></label>
-      <input type="text" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="dob" name="dob" placeholder="Date of Birth">
+      <input type="date" class="form-control"  style="text-align: center;border: 0ch;margin-bottom: 20px;"  id="dob" name="dob" placeholder="Date of Birth">
     </div>
     <div class="form-group">
       <label for="gender"><b>Gender</b></label>
