@@ -25,45 +25,81 @@ class Student(models.Model):
 
 class class10(models.Model):
     c_id=models.AutoField
-    eng=models.CharField( max_length=254)
-    mat=models.CharField( max_length=254)
-    sci=models.CharField( max_length=254)
-    sosci=models.CharField( max_length=254)
-    hin=models.CharField( max_length=254)
-    mar=models.CharField( max_length=254)
+    eng=models.CharField( max_length=254,blank=True)
+    mat=models.CharField( max_length=254,blank=True)
+    sci=models.CharField( max_length=254,blank=True)
+    sosci=models.CharField( max_length=254,blank=True)
+    hin=models.CharField( max_length=254,blank=True)
+    mar=models.CharField( max_length=254,blank=True)
+    
+    engf=models.FileField(null=True,blank=True)
+    matf=models.FileField(null=True,blank=True)
+    scif=models.FileField(null=True,blank=True)
+    soscif=models.FileField(null=True,blank=True)
+    hinf=models.FileField(null=True,blank=True)
+    marf=models.FileField(null=True,blank=True)
 
 class class9(models.Model):
     c_id=models.AutoField
-    eng=models.CharField( max_length=254)
-    mat=models.CharField( max_length=254)
-    sci=models.CharField( max_length=254)
-    sosci=models.CharField( max_length=254)
-    hin=models.CharField( max_length=254)
-    mar=models.CharField( max_length=254)
+    eng=models.CharField( max_length=254,blank=True)
+    mat=models.CharField( max_length=254,blank=True)
+    sci=models.CharField( max_length=254,blank=True)
+    sosci=models.CharField( max_length=254,blank=True)
+    hin=models.CharField( max_length=254,blank=True)
+    mar=models.CharField( max_length=254,blank=True)
+        
+    engf=models.FileField(null=True,blank=True)
+    matf=models.FileField(null=True,blank=True)
+    scif=models.FileField(null=True,blank=True)
+    soscif=models.FileField(null=True,blank=True)
+    hinf=models.FileField(null=True,blank=True)
+    marf=models.FileField(null=True,blank=True)
 
 class class8(models.Model):
     c_id=models.AutoField
-    eng=models.CharField( max_length=254)
-    mat=models.CharField( max_length=254)
-    sci=models.CharField( max_length=254)
-    sosci=models.CharField( max_length=254)
-    hin=models.CharField( max_length=254)
-    mar=models.CharField( max_length=254)
+    eng=models.CharField( max_length=254,blank=True)
+    mat=models.CharField( max_length=254,blank=True)
+    sci=models.CharField( max_length=254,blank=True)
+    sosci=models.CharField( max_length=254,blank=True)
+    hin=models.CharField( max_length=254,blank=True)
+    mar=models.CharField( max_length=254,blank=True)
+
+        
+    engf=models.FileField(null=True,blank=True)
+    matf=models.FileField(null=True,blank=True)
+    scif=models.FileField(null=True,blank=True)
+    soscif=models.FileField(null=True,blank=True)
+    hinf=models.FileField(null=True,blank=True)
+    marf=models.FileField(null=True,blank=True)
 
 class class7(models.Model):
     c_id=models.AutoField
-    eng=models.CharField( max_length=254)
-    mat=models.CharField( max_length=254)
-    sci=models.CharField( max_length=254)
-    sosci=models.CharField( max_length=254)
-    hin=models.CharField( max_length=254)
-    mar=models.CharField( max_length=254)
+    eng=models.CharField( max_length=254,blank=True)
+    mat=models.CharField( max_length=254,blank=True)
+    sci=models.CharField( max_length=254,blank=True)
+    sosci=models.CharField( max_length=254,blank=True)
+    hin=models.CharField( max_length=254,blank=True)
+    mar=models.CharField( max_length=254,blank=True)
+
+    engf=models.FileField(null=True,blank=True)
+    matf=models.FileField(null=True,blank=True)
+    scif=models.FileField(null=True,blank=True)
+    soscif=models.FileField(null=True,blank=True)
+    hinf=models.FileField(null=True,blank=True)
+    marf=models.FileField(null=True,blank=True)
 
 class class6(models.Model):
     c_id=models.AutoField
-    eng=models.CharField( max_length=254)
-    mat=models.CharField( max_length=254)
-    sci=models.CharField( max_length=254)
-    sosci=models.CharField( max_length=254)
-    hin=models.CharField( max_length=254)
-    mar=models.CharField( max_length=254)
+    eng=models.CharField( max_length=254,blank=True)
+    mat=models.CharField( max_length=254,blank=True)
+    sci=models.CharField( max_length=254,blank=True)
+    sosci=models.CharField( max_length=254,blank=True)
+    hin=models.CharField( max_length=254,blank=True)
+    mar=models.CharField( max_length=254,blank=True)
+        
+    engf=models.FileField(null=True,blank=True)
+    matf=models.FileField(null=True,blank=True)
+    scif=models.FileField(null=True,blank=True)
+    soscif=models.FileField(null=True,blank=True)
+    hinf=models.FileField(null=True,blank=True)
+    marf=models.FileField(null=True,blank=True)

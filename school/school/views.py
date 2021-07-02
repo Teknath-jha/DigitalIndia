@@ -57,6 +57,7 @@ def registerTeacher(request):
         return render(request, 'registerTeacher.html')
     if request.method == 'POST':
         print("inside post ")
+        t_teacher=request.POST.get('t_teacher','False')
         username=request.POST['username']
         password=request.POST['teacherPassword']
 
@@ -81,6 +82,9 @@ def registerTeacher(request):
         srkg=request.POST.get('srkg','False')
 
 
+        if t_teacher == 'on':
+            t_teacher=True
+        
         if english == 'on':
             english=True
         if maths == 'on':
@@ -119,7 +123,7 @@ def registerTeacher(request):
         if jrkg == 'on':
             jrkg=True
         
-        Teacher(t_name=username , password=password , english=english , maths=maths , science=science , socialScience=socialScience , 
+        Teacher(t_teacher=t_teacher ,t_name=username , password=password , english=english , maths=maths , science=science , socialScience=socialScience , 
         hindi=hindi , marathi=marathi , std1=std1,std2=std2,std3=std3,std4=std4,std5=std5,std6=std6,std7=std7,std8=std8,std9=std9,std10=std10,
         stdJr=jrkg , stdSr=srkg).save()
 

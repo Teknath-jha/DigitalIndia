@@ -4,6 +4,7 @@ from django.db import models
 
 class Teacher(models.Model):
     t_id=models.AutoField
+    t_teacher=models.BooleanField(default=False)
     t_name=models.CharField( max_length=100)
     password=models.CharField( max_length=50,default="teacher")
 

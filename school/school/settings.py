@@ -130,3 +130,7 @@ STATICFILES_DIRS = [
 
 # below line may remove 
 STATIC_ROOT = os.path.join(BASE_DIR,'assests')
+
+
+MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
