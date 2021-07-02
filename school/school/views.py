@@ -237,16 +237,16 @@ def assignments(request):
     return render(request,'assignments.html')
 
 def assignmentDetails(request):
-    common={}
-    try:
-        stud=loggedinStudent()
-        # common={}
-        # common['tead']=tead
-        common['stud']=stud
-        return render(request,'assignmentDetails.html',common)
-    except:
-        tead=loggedinTeacher()
-        # common={}
-        common['tead']=tead
-        # common['stud']=stud
-        return render(request,'assignmentDetails.html',common)
+    # common={}
+    # try:
+    #     stud=loggedinStudent()
+    #     # common={}
+    #     # common['tead']=tead
+    #     common['stud']=stud
+    #     return render(request,'assignmentDetails.html',common)
+    # except:
+    #     tead=loggedinTeacher()
+    #     # common={}
+    #     common['tead']=tead
+    #     # common['stud']=stud
+    return render(request,'assignmentDetails.html')
