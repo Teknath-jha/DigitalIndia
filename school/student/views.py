@@ -6,11 +6,8 @@ from django.http import HttpResponse
 def index(request):
     return render(request,'index.html')
 
-def assignments(request):
-    return render(request,'assignments.html')
 
-def assignmentDetails(request):
-    return render(request,'assignmentDetails.html')
+
 
 def feeDetails(request):
     return HttpResponse("we are at fee details")

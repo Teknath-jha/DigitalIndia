@@ -22,3 +22,48 @@ class Student(models.Model):
     # def __str__(self):
     #     name=self.username + " r->" +self.s_rollNo + " std->"+ self.s_standard
     #     return name
+
+class class10(models.Model):
+    c_id=models.AutoField
+    eng=models.CharField( max_length=254)
+    mat=models.CharField( max_length=254)
+    sci=models.CharField( max_length=254)
+    sosci=models.CharField( max_length=254)
+    hin=models.CharField( max_length=254)
+    mar=models.CharField( max_length=254)
+
+class class9(models.Model):
+    c_id=models.AutoField
+    eng=models.CharField( max_length=254)
+    mat=models.CharField( max_length=254)
+    sci=models.CharField( max_length=254)
+    sosci=models.CharField( max_length=254)
+    hin=models.CharField( max_length=254)
+    mar=models.CharField( max_length=254)
+
+class class8(models.Model):
+    c_id=models.AutoField
+    eng=models.CharField( max_length=254)
+    mat=models.CharField( max_length=254)
+    sci=models.CharField( max_length=254)
+    sosci=models.CharField( max_length=254)
+    hin=models.CharField( max_length=254)
+    mar=models.CharField( max_length=254)
+
+class class7(models.Model):
+    c_id=models.AutoField
+    eng=models.CharField( max_length=254)
+    mat=models.CharField( max_length=254)
+    sci=models.CharField( max_length=254)
+    sosci=models.CharField( max_length=254)
+    hin=models.CharField( max_length=254)
+    mar=models.CharField( max_length=254)
+
+class class6(models.Model):
+    c_id=models.AutoField
+    eng=models.CharField( max_length=254)
+    mat=models.CharField( max_length=254)
+    sci=models.CharField( max_length=254)
+    sosci=models.CharField( max_length=254)
+    hin=models.CharField( max_length=254)
+    mar=models.CharField( max_length=254)

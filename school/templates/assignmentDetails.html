@@ -1,6 +1,18 @@
 {% extends "base.html"%}
 {%load static%}
 {% block title %}assignments {% endblock %}
+{% block login %} 
+
+{%if stud.username %}
+<h5>student</h5>
+{{stud.s_rollNo}} 
+{%else%}
+<h5>teacher</h5>
+{{tead.t_name}} 
+{%endif%}
+{% endblock %}
+
+
 {% block content %}
 
 <main id="main" data-aos="fade-in">
@@ -9,7 +21,7 @@
     <div class="breadcrumbs">
         <div class="container">
             <h2>Assignments of Mathematics</h2>
-            <p>sir's name </p>
+            <p> {{tead.t_name}} </p>
         </div>
     </div><!-- End Breadcrumbs -->
 
@@ -21,7 +33,7 @@
             </div>
         </div>
 
-
+        <hr>
     </section>
 
 </main><!-- End #main -->

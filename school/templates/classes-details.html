@@ -4,6 +4,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Login{% endblock %}
+{% block login %}  {{tead.t_name}} {%endblock%}
 {% block content %}
 
 
@@ -13,9 +14,7 @@
     <div class="breadcrumbs">
         <div class="container">
             <h2>Courses</h2>
-            <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas
-                sit
-                quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+            <p>Assigned courses  </p>
         </div>
     </div><!-- End Breadcrumbs -->
 
@@ -26,57 +25,56 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                    {% if tead.english %}
                     <div class="col-lg-3 col-md-4">
                         <div class="icon-box">
                             <i class="ri-english-input" style="color: #ffbb2c;"></i>
                             <h3><a href="{%url 'assignmentDetails'%}">English</a></h3>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                    {%endif%}
+                    {% if tead.maths %}
+                    <div class="col-lg-3 col-md-4">
                         <div class="icon-box">
-                            <i class="ri-calendar-todo-line" style="color: #5578ff;"></i>
-                            <h3><a href="">Hindi</a></h3>
+                            <i class="ri-english-input" style="color: #ffbb2c;"></i>
+                            <h3><a href="{%url 'assignmentDetails'%}">Mathematics</a></h3>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                    {%endif%}
+                    {% if tead.science %}
+                    <div class="col-lg-3 col-md-4">
                         <div class="icon-box">
-                            <i class="ri-file-list-3-line " style="color: #e80368;"></i>
-                            <h3><a href="">Marathi</a></h3>
+                            <i class="ri-english-input" style="color: #ffbb2c;"></i>
+                            <h3><a href="{%url 'assignmentDetails'%}">Science</a></h3>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+                    {%endif%}
+                    {% if tead.socialScience %}
+                    <div class="col-lg-3 col-md-4">
                         <div class="icon-box">
-                            <i class="ri-chat-history-line" style="color: #e361ff;"></i>
-                            <h3><a href="">History</a></h3>
+                            <i class="ri-english-input" style="color: #ffbb2c;"></i>
+                            <h3><a href="{%url 'assignmentDetails'%}">Social science</a></h3>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 mt-4">
+                    {%endif%}
+                    {% if tead.hindi %}
+                    <div class="col-lg-3 col-md-4">
                         <div class="icon-box">
-                            <i class="ri-base-station-line" style="color: #47aeff;"></i>
-                            <h3><a href="">Geography</a></h3>
+                            <i class="ri-english-input" style="color: #ffbb2c;"></i>
+                            <h3><a href="{%url 'assignmentDetails'%}">Hindi</a></h3>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 mt-4">
+                    {%endif%}
+                    {% if tead.marathi %}
+                    <div class="col-lg-3 col-md-4">
                         <div class="icon-box">
-                            <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-                            <h3><a href="">Science</a></h3>
+                            <i class="ri-english-input" style="color: #ffbb2c;"></i>
+                            <h3><a href="{%url 'assignmentDetails'%}">Marathi</a></h3>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 mt-4">
-                        <div class="icon-box">
-                            <i class="ri-bar-chart-box-line" style="color: #11dbcf;"></i>
-                            <h3><a href="">Math</a></h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 mt-4">
-                        <div class="icon-box">
-                            <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-                            <h3><a href="">EVS</a></h3>
-                        </div>
-                    </div>
+                    {%endif%}
 
                 </div>
-
             </div>
         </section>
 

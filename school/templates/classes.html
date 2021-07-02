@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Login{% endblock %}
+{%block login%}{{tead.t_name}}{%endblock%}
 {% block content %}
 
 
@@ -18,56 +19,101 @@
 
         <!-- ======= Courses Section ======= -->
         <section id="courses" class="courses">
+            {%    if tead.std10  %}
             <a href="{%url 'classesDetails'%}">
                 <div class="alert alert-dark container" role="alert">
                     class 10
                 </div>
             </a>
+            {%  endif%}
+            
+            {%    if tead.std9  %}
             <a href="{%url 'classesDetails'%}">
                 <div class="alert alert-dark container" role="alert">
                     class 9
                 </div>
             </a>
+            {%  endif%}
+            
+            {%    if tead.std8  %}
             <a href="{%url 'classesDetails'%}">
                 <div class="alert alert-dark container" role="alert">
                     class 8
                 </div>
             </a>
+            {%  endif%}
+            
+            {%    if tead.std7  %}
             <a href="{%url 'classesDetails'%}">
                 <div class="alert alert-dark container" role="alert">
                     class 7
                 </div>
             </a>
+            {%  endif%}
+            
+            {%    if tead.std6  %}
             <a href="{%url 'classesDetails'%}">
                 <div class="alert alert-dark container" role="alert">
                     class 6
                 </div>
             </a>
+            {%  endif%}
+            
+            {%    if tead.std5  %}
             <a href="{%url 'classesDetails'%}">
                 <div class="alert alert-dark container" role="alert">
                     class 5
                 </div>
             </a>
+            {%  endif%}
+            
+            {%    if tead.std4  %}
             <a href="{%url 'classesDetails'%}">
                 <div class="alert alert-dark container" role="alert">
                     class 4
                 </div>
             </a>
+            {%  endif%}
+            
+            {%    if tead.std3  %}
             <a href="{%url 'classesDetails'%}">
                 <div class="alert alert-dark container" role="alert">
                     class 3
                 </div>
             </a>
+            {%  endif%}
+            
+            {%    if tead.std2  %}
             <a href="{%url 'classesDetails'%}">
                 <div class="alert alert-dark container" role="alert">
                     class 2
                 </div>
             </a>
+            {%  endif%}
+            
+            {%    if tead.std1  %}
             <a href="{%url 'classesDetails'%}">
                 <div class="alert alert-dark container" role="alert">
                     class 1
                 </div>
             </a>
+            {%  endif%}
+            
+            {%    if tead.stdJr  %}
+            <a href="{%url 'classesDetails'%}">
+                <div class="alert alert-dark container" role="alert">
+                    class Srkg
+                </div>
+            </a>
+            {%  endif%}
+            
+            {%    if tead.stdJr  %}
+            <a href="{%url 'classesDetails'%}">
+                <div class="alert alert-dark container" role="alert">
+                    class jrKg
+                </div>
+            </a>
+            {%  endif%}
             
 
         </section><!-- End Courses Section -->

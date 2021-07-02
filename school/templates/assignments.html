@@ -1,6 +1,7 @@
 {% extends "base.html"%}
 {%load static%}
 {% block title %}assignments{% endblock %}
+{%block login%}{{stud.s_rollNo}}{%endblock%}
 {% block content %}
 <br>
 <br>
@@ -11,6 +12,8 @@
   <!-- ======= Features Section ======= -->
   <section id="features" class="features">
     <div class="container" data-aos="fade-up">
+      <h2>logged in as : {{stud.username}}  {{stud.s_surname}} with roll no. {{stud.s_rollNo}}</h2>
+      <br>
       <h2>Subjects</h2>
       <div class="row" data-aos="zoom-in" data-aos-delay="100">
         <div class="col-lg-3 col-md-4">

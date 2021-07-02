@@ -126,7 +126,7 @@ def registerTeacher(request):
         print("Teacher is added ")
         return HttpResponse("Teacher added <a href='/'>go to back</a> ")
 
-
+# loggedinStudent=None
 def handlelogin(request):
     if request.method == 'POST':
         # get post parameters
@@ -137,41 +137,60 @@ def handlelogin(request):
         flagStudent = False
         # fetch all records from student table of Student schema model
         stu = Student.objects.all()
+        stud=Student.objects.none()
         for x in stu:
             print(x.username + " " + x.password)
             if x.username == loginusername and x.password == loginpassword:
                 print("match kargaya re ye to student hai  ")
+                stud=x
                 flagStudent = True
+                break
+        global loggedinStudent
+        def loggedinStudent():
+            return stud
         
         flagTeacher = False
         # fetch all records from student table of Student schema model
         tea = Teacher.objects.all()
+        tead=Teacher.objects.none()
         for x in tea:
             print(x.t_name + " " + x.password)
             if x.t_name == loginusername and x.password == loginpassword:
                 print("match kargaya re ye to sir hai  ")
                 flagTeacher = True
-
-
+                tead=x
+                break
+        global loggedinTeacher
+        def loggedinTeacher():
+            return tead
+        
+        
+        # usrt={'username':loginusername}
+        usrp={'username':"Principal"}
+        # stud=Student.objects.filter(username=loginusername)
+        print("stud here bro ")
+        
         # Student loggin would be here
         if flagStudent == True:
             messages.success(request, "Logged In")
             print("student  logged in")
-            return render(request, 'assignments.html')
+            usr={}
+            usr['stud']=stud
+            return render(request, 'assignments.html',usr)
 
         # Teacher loggin would be here
         elif flagTeacher == True:
             messages.success(request, "Logged In")
             print("Teacher  logged in")
-            return render(request, 'classes.html')
+            usrt={}
+            usrt['tead']=tead
+            return render(request, 'classes.html',usrt)
 
         # principal loggin
         elif user is not None:
             login(request, user)
             messages.success(request, "Logged In")
-            return render(request, 'principalPage.html')
-        
-        
+            return render(request, 'principalPage.html',usrp)
 
         else:
             print("not authorized by if block " + loginusername + "  ")
@@ -201,7 +220,29 @@ def feeStructure(request):
     return HttpResponse(" we are at feeStructure")
 
 def classesDetails(request):
-    return render(request,'classes-details.html')
+    tead=loggedinTeacher()
+    tead1={}
+    tead1['tead']=tead
+    return render(request,'classes-details.html',tead1)
 
 def classes(request):
     return render(request,'classes.html')
+
+
+def assignments(request):
+    return render(request,'assignments.html')
+
+def assignmentDetails(request):
+    common={}
+    try:
+        stud=loggedinStudent()
+        # common={}
+        # common['tead']=tead
+        common['stud']=stud
+        return render(request,'assignmentDetails.html',common)
+    except:
+        tead=loggedinTeacher()
+        # common={}
+        common['tead']=tead
+        # common['stud']=stud
+        return render(request,'assignmentDetails.html',common)
