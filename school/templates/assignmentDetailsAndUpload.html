@@ -1,0 +1,103 @@
+{% extends "base.html"%}
+{%load static%}
+{% block title %}assignments {% endblock %}
+{% block login %}
+
+{%if stud.username %}
+<h5>student</h5>
+{{stud.s_ro0llNo}}
+{%else%}
+<h5>teacher</h5>
+{{tead.t_name}}
+{%endif%}
+{% endblock %}
+
+
+{% block content %}
+
+<main id="main" data-aos="fade-in">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h2>Assignments of Mathematics</h2>
+            <p>  </p>
+        </div>
+    </div><!-- End Breadcrumbs -->
+
+
+<div class="container">
+
+    <section id="courses" class="card-body">
+
+        <form method="post" enctype="multipart/form-data" >
+
+            {% csrf_token %}
+            
+            <input type="file" class="form-control" name="document" >
+            <h3>About file</h3>
+            <input type="text" class="form-control" name="infoDoc"  >
+            <button  class="btn btn-primary" type="submit">Upload file</button>
+
+        </form>
+        {% if url %}
+
+        <p> Uploaded file : <a href="{{url}}">{{url}} </a></p>
+
+        {%endif%}
+
+        <!-- <div class="card">
+            <div class="card-body">
+                preiview of work 
+                <a href="#" class="btn btn-primary">view details</a>
+            </div>
+        </div> -->
+        <hr>
+    </section>
+
+</div>
+
+    <!-- {% for i in data%}
+    <section id="courses" class="courses container-new">
+        <div class="card">
+            <div class="card-body">
+
+                <a href="#" class="btn btn-primary">Download</a>
+            </div>
+        </div>
+        <hr>
+    </section>
+    {%endfor%}
+
+    {% if tead.t_teacher %}
+    <div class="container">
+        <form action="" method="post" enctype="multipart/form-data" class="mt-5">
+            {% csrf_token%}
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4"><b>Description</b> </label>
+                    <input type="textarea" class="form-control" id="desc" placeholder="descritpion...">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4"><b>File</b></label>
+                    <input type="file" class="form-control" id="fileNotes" placeholder="file">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
+    {%endif%} -->
+
+</main><!-- End #main -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

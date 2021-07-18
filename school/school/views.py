@@ -5,6 +5,7 @@ from teachingStaff.models import Teacher
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from django.core.files.storage import FileSystemStorage
 # from student.models import Post
 # from user_profile.models import User
 
@@ -236,7 +237,7 @@ def classes(request):
 def assignments(request):
     return render(request,'assignments.html')
 
-def assignmentDetails(request):
+def assignmentDetailsAndUpload(request):
     # common={}
     # try:
     #     stud=loggedinStudent()
@@ -249,4 +250,17 @@ def assignmentDetails(request):
     #     # common={}
     #     common['tead']=tead
     #     # common['stud']=stud
-    return render(request,'assignmentDetails.html')
+    context={}
+    if request.method=='POST':
+        uploaded_File = request.FILES['document']
+        infoDoc = request.POST['infoDoc']
+        fs = FileSystemStorage()
+        name=fs.save(uploaded_File.name,uploaded_File)
+        context['url']=fs.url(name)
+        print(uploaded_File.name)
+        print(uploaded_File.size , "bytes")
+
+    return render(request,'assignmentDetailsAndUpload.html' , context)
+
+# def upload(request):
+#     return render(request,'assignmentDetails.html')

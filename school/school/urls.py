@@ -26,7 +26,7 @@ urlpatterns = [
     path('about/',views.about , name='about'),
     path('aboutDevelopers/',views.aboutDevelopers , name='aboutDevelopers'),
     path("assignments/",views.assignments,name='assignments'),
-    path("assignmentDetails/",views.assignmentDetails,name='assignmentDetails'),
+    path("assignmentDetailsAndUpload/",views.assignmentDetailsAndUpload,name='assignmentDetailsAndUpload'),
     path('login',views.handlelogin , name='handlelogin'),
     path('logout/',views.handlelogout , name='handlelogout'),
     path('register',views.register , name='register'),
@@ -37,6 +37,7 @@ urlpatterns = [
     path('feeStructure/',views.feeStructure, name='feeStructure'),
     path('classes/',views.classes, name='classes'),
     path('classesDetails/',views.classesDetails, name='classesDetails'),
+    # path('upload/',views.upload, name='upload'),
     path("student/",include('student.urls')),                         #includeing entire app os student
     path("teachingStaff/",include('teachingStaff.urls'))
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
